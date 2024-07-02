@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baldoqui</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+    <style>
+    .post-title {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .post-content {
+      font-size: 1.2em;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+   <%- include('../src/components/nav.ejs') %>
+
+    <div class="container">
+     <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="post">
+          <div class="post-title">Título do Post</div>
+          <div class="post-content">
+            <p>Esta é uma breve introdução ao conteúdo do blog. Mantenha o design limpo e minimalista para garantir uma boa experiência de leitura.</p>
+          </div>
+        </div>
+        <div class="post mt-4">
+          <div class="post-title">Outro Título de Post</div>
+          <div class="post-content">
+            <p>Mais conteúdo interessante pode ser encontrado aqui. O objetivo é atrair os leitores e mantê-los envolvidos com textos de qualidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+      <!--<p>&copy; 2024 Blog Minimalista</p>-->
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
