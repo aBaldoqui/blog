@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "ts-node-dev --respawn src/server.ts"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "http-serve": "^1.0.1",
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}
