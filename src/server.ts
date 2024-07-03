@@ -10,16 +10,21 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rota para a página inicial
 app.get('/', (req: Request, res: Response) => {
-    res.render(path.join(__dirname, '..', 'public', 'index'));
+    res.render(path.join(__dirname, '..', 'views', 'pages', 'index'));
 });
 
 app.get('/construcao', (req: Request, res: Response) => {
-    res.render(path.join(__dirname, '..', 'public', 'inprogress'));
+    res.render(path.join(__dirname, '..', 'views', 'pages', 'inprogress'));
 })
 
-//app.get('/blog-style.css', (req, res) => {
-//    res.sendFile(path.join(__dirname, 'public/css/styles.css'));
-//});
+app.get('/post-style/:postUid', (req, res) => {
+    const postUid = req.params.postUid;
+    const post = posts.find((element) => element.uid = postUid);
+
+    if(post){
+        res.sendFile(path.join(__dirname, '..', 'views', post.filePath, 'styles.css'));
+    }
+});
 
 // Rota para posts individuais
 app.get('/:postUid', (req: Request, res: Response) => {
@@ -27,7 +32,7 @@ app.get('/:postUid', (req: Request, res: Response) => {
     const post = posts.find((element) => element.uid = postUid);
 
     if (post) {
-        res.render('post', { post });
+        res.render('pages/post', { post });
     } else {
         res.status(404).send('Post não encontrado');
     }

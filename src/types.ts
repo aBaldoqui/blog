@@ -1,7 +1,7 @@
 export interface Post {
     uid: string;
     title: string;
-    fileName: string;
+    filePath: string;
     content: string | null;
 }
 
