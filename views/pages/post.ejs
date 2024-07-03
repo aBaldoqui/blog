@@ -19,33 +19,24 @@
       font-size: 1.2em;
       line-height: 1.6;
     }
-    .footer {
-      margin-top: 20px;
-      text-align: center;
-      padding: 10px 0;
-      border-top: 1px solid #444;
-    }
   </style>
+    <link rel="stylesheet" href=<%= "/post-style/"+post.uid %>>
 </head>
 <body>
-  <%- include('../src/components/nav.ejs') %>
+  <%- include('../partials/nav') %>
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="post">
-          <div class="post-title"><%= post.title %></div>
+          <div class="post-title" stule="font-wheigh:bold;"><%= post.title %></div>
           <div class="post-meta">publicado em 1 de Julho de 2024</div>
           <div class="post-content">
-            <p><%= post.content %></p>
-            <p>Este é o conteúdo do post. Você pode escrever todo o seu texto aqui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim arcu nec odio convallis, sit amet posuere magna ultrices. Nulla facilisi.</p>
-            <p>Proin quis turpis non felis placerat fermentum. Ut quis eleifend libero, vel ultrices eros. Fusce nec sapien non sem consequat vehicula. Donec malesuada, ex nec eleifend feugiat, elit dui eleifend purus, nec vestibulum velit odio in justo.</p>
-            <p>Pellentesque sit amet erat sed magna vestibulum efficitur. Sed nec posuere leo, in varius odio. Vestibulum sit amet dui vitae risus congue ullamcorper. Donec pharetra, nisi eu consectetur eleifend, ex metus lacinia felis, non vestibulum nisi ex et metus.</p>
+            <%- include('../'+post.filePath+"index") %>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <footer class="footer">
     <p>&copy; 2024 Arthur Baldoqui</p>
   </footer>

@@ -2,6 +2,16 @@
       background-color: #000;
       color: #fff;
     }
+
     .navbar {
+      background-color: #200000!important;
       margin-bottom: 20px;
     }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #444;
+    }
+

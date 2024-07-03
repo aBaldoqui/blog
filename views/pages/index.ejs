@@ -6,24 +6,15 @@
   <title>Baldoqui</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-    <style>
+  <style>
     .post-title {
       font-size: 2em;
       margin-bottom: 10px;
     }
-    .post-content {
-      font-size: 1.2em;
-    }
-    .footer {
-      margin-top: 20px;
-      text-align: center;
-      padding: 10px 0;
-      border-top: 1px solid #444;
-    }
   </style>
 </head>
 <body>
-   <%- include('../src/components/nav.ejs') %>
+   <%- include('../partials/nav.ejs') %>
 
     <div class="container">
      <div class="row">
@@ -32,12 +23,6 @@
           <div class="post-title">Título do Post</div>
           <div class="post-content">
             <p>Esta é uma breve introdução ao conteúdo do blog. Mantenha o design limpo e minimalista para garantir uma boa experiência de leitura.</p>
-          </div>
-        </div>
-        <div class="post mt-4">
-          <div class="post-title">Outro Título de Post</div>
-          <div class="post-content">
-            <p>Mais conteúdo interessante pode ser encontrado aqui. O objetivo é atrair os leitores e mantê-los envolvidos com textos de qualidade.</p>
           </div>
         </div>
       </div>

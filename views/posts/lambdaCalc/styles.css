@@ -1,0 +1,57 @@
+.content {
+    width: auto;
+    background: #200000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content div {
+    margin-bottom: 20px;
+}
+
+/*.intro {
+    margin-bottom: 20px;
+}*/
+
+.alonzo-section {
+    display: flex;
+    align-items: center;
+    /*margin-bottom:20px;*/
+}
+
+.alonzo-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.alonzo-text h2 {
+    margin: 0 0 10px;
+}
+
+.alonzo-text p {
+    margin: 0;
+}
+
+.lambda-expression {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.lambda-expression::before {
+    content: attr(data-content);
+    display: block;
+    font-size: 18px;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
