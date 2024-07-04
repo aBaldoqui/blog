@@ -12,17 +12,51 @@
 	<div>
 		<h2>Cálculo Lambda Vs Máquina de Turing</h2>
 		<p>O Cálculo Lambda como vimos foi desenvolvido por Alonzo Church e a Máquian de Turing, sendo a máquina que você está utilizando para ler esse blog, foi inventado posteriormente por Alan Turing. E com o avanço do estudo das funções computáveis, foi descoberto que estes sistemas são formalmente equivalentes, no sentido de que qualquer programa de computador escrito para uma máquina de Turing pode ser traduzido para o Cálculo Lambda, isso se da pelo Teorema de Church-Turing.</p>
-		<h2>Termos em Cálculo Lambda</h2>
-		<p></p>
+		<h2>Sintaxe de cálculo lambda</h2>
+		<p>Podemos definir de forma intuitiva a sintaxe do Cálculo Lambda sendo composta pela letra λ seguida de uma variavel e depois pelo corpo da função definida em termos das variáveis, e então poderiamo escrever algo como:</p>
 
-		<div class="lambda-expression" data-content="Exemplo 1:">
+		<div class="lambda-expression" data-content="Função de Sucessor">
 			λx.(x + 1)
 		</div>
 		
-		<div class="lambda-expression" data-content="Exemplo 2:">
+		<div class="lambda-expression" data-content="Função de Soma">
 			λx.λy.(x + y)
 		</div>
+		
+		<p>No entanto, se nosso objetivo for estudar de fato matemática dura proposta por Church precisariamos de definições formais mais rigorosas axiomas e tudo mais, mas por enquanto podemos usar essa noção intuitiva para estudar nossos primeiros termos, ainda assim podemos melhorar um pouco a definição.</p>
+		<p>Tudo em cálculo lambda é formado por termos, e os termos têm uma sintaxe bem simples. Podendo ser basicamente:</p>
+		<ul>
+    			<li>Uma variável (x, y, z...)</li>
+    			<li>Uma abstração, em que se x é uma variável e t é um termo lambda, então λx.t é uma abstração</li>
+    			<li>Uma aplicação, em que se t e s são termos lambda, então ts é uma aplicação</li>
+		</ul>
+		<p>Nada mais é termo lambda, e, por isso, os exemplos iniciais não são termos lambda de verdade, uma vez que "+" não está definido e "1" também não está definido. Na verdade, nada disso está definido por padrão, mas pode ser definido usando esse simples sistema.</p>
+		<p>Por fim, neste artigo introdutório podemos codificar os valores lógicos <em>verdadeiro</em> e <em>falso</em> e o operador <em>não</em>, usando este sistema, para fazer isso escrevemos uma abstração que recebe duas variáveis e retorna a primeira ou a segunda se verdadeiro ou se falso repectivamente</p>
+
+		<div class="lambda-expression" data-content="VERDADE">
+			λx.λy.x
+		</div>
+
+		<div class="lambda-expression" data-content="FALSO">
+			λx.λy.y
+		</div>
+
+		<p>Vamos adotar V para verdade e F para falso. Além disso o operador <em>não</em> inverte o valor lógico de verdadeiro para falso, perceba que as funções que criamos trazem a ideia de "escolher" entre duas entradas, usando isso podemos fazer a abstração:</p>
+
+		<div class="lambda-expression" data-content="NÃO">
+			λb.b F V
+		</div>
+
+		Podemos testar, se fizermos a aplicação <em>não verdade</em> devemos receber falso como saída.
+
+		<div class="lambda-expression" data-content="NÃO VERDADE">
+			<p>(λb.b F V) V</p>
+			<p>(V F V)</p>
+			<p>(λx.λy.x)F V</p>
+			<p> F</p>
+			<p> c.q.d </p>
+		</div>
+
 
 	</div>
-
 </div>
