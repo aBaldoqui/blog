@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rota para a página inicial
 app.get('/', (req: Request, res: Response) => {
-    res.render(path.join(__dirname, '..', 'views', 'pages', 'index'));
+    res.render('pages/index', {posts});
 });
 
 app.get('/construcao', (req: Request, res: Response) => {
@@ -19,7 +19,7 @@ app.get('/construcao', (req: Request, res: Response) => {
 
 app.get('/post-style/:postUid', (req, res) => {
     const postUid = req.params.postUid;
-    const post = posts.find((element) => element.uid = postUid);
+    const post = posts.find((element) => element.uid == postUid);
 
     if(post){
         res.sendFile(path.join(__dirname, '..', 'views', post.filePath, 'styles.css'));
@@ -29,7 +29,7 @@ app.get('/post-style/:postUid', (req, res) => {
 // Rota para posts individuais
 app.get('/:postUid', (req: Request, res: Response) => {
     const postUid = req.params.postUid;
-    const post = posts.find((element) => element.uid = postUid);
+    const post = posts.find((element) => element.uid == postUid);
 
     if (post) {
         res.render('pages/post', { post });
