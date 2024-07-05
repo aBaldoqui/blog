@@ -18,13 +18,14 @@
 
     <div class="container">
      <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <div class="post">
-          <div class="post-title">Título do Post</div>
-          <div class="post-content">
-            <p>Esta é uma breve introdução ao conteúdo do blog. Mantenha o design limpo e minimalista para garantir uma boa experiência de leitura.</p>
-          </div>
-        </div>
+      <div class="col-md-8 offset-md-2 post-list">
+        <ul>
+          <% posts.forEach(function(post) { %>
+            <li>
+              <h3><a href="/<%=post.uid%>"><%=post.title%></a></h3>
+            </li>
+          <% }) %>
+        </ul>
       </div>
     </div>
   </div>
