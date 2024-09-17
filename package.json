@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "ts-node-dev --respawn src/server.ts"
+  "build": "tsc",
+  "start": "node dist/index.js",
+  "dev": "ts-node src/index.ts"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
