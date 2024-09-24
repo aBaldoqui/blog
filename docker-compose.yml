@@ -1,32 +1,17 @@
 services:
   postgres:
-    image: postgres
-    container_name: postgres-db
+    image: postgres:latest
+    container_name: my_postgres
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: blog
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=blog
     ports:
       - "5432:5432"
     volumes:
-      - db_data:/var/lib/postgresql/data
-    networks:
-      - app-network
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
 
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: blog
-    ports:
-      - "3000:3000"
-    depends_on:
-      - postgres
-    networks:
-      - app-network
-    volumes:
-      - .:/app
-    command: npm run dev
 
 volumes:
   db_data:

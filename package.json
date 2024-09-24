@@ -5,15 +5,25 @@
     "start:dev": "nodemon ./src/server.ts"
   },
   "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.42",
     "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "http-serve": "^1.0.1",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "pg": "^8.13.0",
+    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.3",
+    "sequelize-typescript": "^2.1.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "@types/pg": "^8.11.10",
+    "@types/validator": "^13.12.2",
     "nodemon": "^3.1.7",
+    "sequelize-cli": "^6.6.2",
+    "sequelize-cli-typescript": "^3.2.0-c",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.3"
