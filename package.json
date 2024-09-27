@@ -5,6 +5,7 @@
     "start:dev": "nodemon ./src/server.ts"
   },
   "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.42",
     "@sequelize/postgres": "^7.0.0-alpha.42",
     "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
